@@ -1,7 +1,4 @@
-<head>
-    <meta charset="UTF-8">
-    <title>Hello World Script</title>
-</head>
+<head><title>Hello World Script</title></head>
 <body>
 <?php
 echo "<p>Hello World!</p>";
