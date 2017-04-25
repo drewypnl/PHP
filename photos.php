@@ -3,18 +3,19 @@
     <title>Image Gallery</title>
 </head>
 <body>
+<h1>My Photos</h1>
 <?php
 /*Script name: displayGallery
-* Description: Dsplays all the photos that are stored
+* Description: Displays all the photos that are stored
  * in a specified directory
  */
-
-$dir = "C:/Users/Steve/Documents/Pics/";
+//mkdir("C:/MAMP/htdocs/mynewdir");
+$dir = "C:/MAMP/htdocs/Pics/";
 $dh = opendir($dir);
 while($filename = readdir($dh))
 {
     $filepath = $dir.$filename;
-    if(is_file($filepath) and ereg("/.jpg$",$filename))
+    if(is_file($filepath) and preg_match("/.jpg$",$filename))
     {
         $gallery[] = $filepath;
     }
@@ -23,10 +24,10 @@ sort($gallery);
 foreach ($gallery as $image)
 {
     echo "<hr />";
-    echo ",img src='$image'' /><br />";
+    echo "<img src='$image' /><br />";
 }
-
 ?>
-</body>
-</html>
+</body><footer>Finished List</footer></html>
+
+
 
