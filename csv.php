@@ -3,7 +3,7 @@
  * Description: Reads in a CSV file and outputs a
  * tab-delimited file. The CSV file must have a
  * .CSV extension. */
-$myfile = "testing";
+$myfile = "test";
 function convert($filename)
 {
     if(@$fh_in = fopen("{$filename}.csv","r"))
@@ -26,7 +26,7 @@ function convert($filename)
         echo "File doesn't exist\n";
         return false;
         }
-        echo "Conversion completed!\n";
+    echo "Conversion completed!\n";
     return true;
 }
 convert($myfile);
